@@ -1,8 +1,0 @@
-{
-    "name": "deploy-api-vercel",
-    "version": 2,
-    "public": true,
-    "buildCommand": {
-        "build": "index.js"
-    }
-}
