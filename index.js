@@ -15,9 +15,9 @@ app.engine("hbs", hbs.engine({
 app.use(express.static('public'));
 app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-  res.render('home')
-})
+// app.get('/', (req, res) => {
+//   res.render('home')
+// })
 
 app.get('/cad_pro', (req, res) => {
   res.render('cad_pro')
@@ -35,7 +35,7 @@ app.get('/exibir_pro', (req, res) => {
 })
 })
 
-app.get('/produtos_api', (req, res) => {
+app.get('/', (req, res) => {
   Produto.findAll().then((valores)=>{
     return res.json(valores) 
 }).catch((err)=>{
