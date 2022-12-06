@@ -5,12 +5,12 @@ const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser')
 const Produto = require('./models/Produto')
 
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.urlencoded({ extended: false }))
 
-app.engine("hbs", hbs.engine({
-  extname: 'hbs',
-  defaultLayout: 'main'
-}));
+// app.engine("hbs", hbs.engine({
+//   extname: 'hbs',
+//   defaultLayout: 'main'
+// }));
 
 app.use(express.static('public'));
 app.set('view engine', 'hbs');
