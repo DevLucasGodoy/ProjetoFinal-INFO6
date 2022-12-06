@@ -4,9 +4,5 @@
     "public": true,
     "buildCommand": {
         "build": "index.js"
-    },
-    "routes": {
-        "src": "/",
-        "dest": "index.js"
     }
 }
