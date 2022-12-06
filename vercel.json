@@ -2,8 +2,8 @@
     "name": "deploy-api-vercel",
     "version": 2,
     "public": true,
-    "build": {
-        "use": "@vercel/node"
+    "buildCommand": {
+        "build": "index.js"
     },
     "routes": {
         "src": "/",
