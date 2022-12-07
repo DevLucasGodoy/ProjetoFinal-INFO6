@@ -12,12 +12,12 @@ const Produto = require('./models/Produto')
 //   defaultLayout: 'main'
 // }));
 
-app.use(express.static('public'));
-app.set('view engine', 'hbs');
+// app.use(express.static('public'));
+// app.set('view engine', 'hbs');
 
-// app.get('/', (req, res) => {
-//   res.render('home')
-// })
+app.get('/', (req, res) => {
+  res.render('index')
+})
 
 app.get('/cad_pro', (req, res) => {
   res.render('cad_pro')
@@ -35,7 +35,7 @@ app.get('/exibir_pro', (req, res) => {
 })
 })
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   Produto.findAll().then((valores)=>{
     return res.json(valores) 
 }).catch((err)=>{
